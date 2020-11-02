@@ -1,0 +1,15 @@
+{
+    "name": "durlesteanu/mvc0",
+    "authors": [
+        {
+            "name": "stefandurlesteanu",
+            "email": "stefan.durlesteanu@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
