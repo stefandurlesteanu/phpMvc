@@ -1,36 +1,18 @@
 <br>
 <h1>Sign Up</h1>
 <br>
-<form action="" method="post">
+<?php $form = \app\core\form\Form::begin('', "post") ?>
     <div class="row">
         <div class="col">
-            <div class="mb-3">
-                <label>Firstname</label>
-                <input type="text" class="form-control" name="firstname">
-            </div>
+            <?php echo $form->field($model, 'firstname') ?>
         </div>
         <div class="col">
-            <div class="mb-3">
-                <label>Lastname</label>
-                <input type="text" class="form-control" name="lastname">
-            </div>
+            <?php echo $form->field($model, 'lastname') ?>
         </div>
     </div>
-
-
-    <div class="mb-3">
-        <label>Email</label>
-        <input type="text" class="form-control" name="email">
-    </div>
-    <div class="mb-3">
-        <label>Password</label>
-        <input type="password" class="form-control" name="password">
-    </div>
-    <div class="mb-3">
-        <label>Confirm password</label>
-        <input type="password" class="form-control" name="confirmPassword">
-    </div>
-
+    <?php echo $form->field($model, 'email') ?>
+    <?php echo $form->field($model, 'password')->passwordField() ?>
+    <?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
 
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<?php \app\core\form\Form::end() ?>
